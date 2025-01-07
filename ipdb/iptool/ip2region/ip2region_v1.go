@@ -1,7 +1,7 @@
 package ip2region
 
 import (
-	"genie/ipdb/iptool/ip_base"
+	"github.com/xyu-io/genie/ipdb/iptool/ip_base"
 	"log"
 	"sync"
 )

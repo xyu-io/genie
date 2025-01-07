@@ -2,7 +2,7 @@ package geoip
 
 import (
 	"errors"
-	"genie/ipdb/iptool/ip_base"
+	"github.com/xyu-io/genie/ipdb/iptool/ip_base"
 	"log"
 	"net"
 	"os"

@@ -1,10 +1,10 @@
 package ipdb
 
 import (
-	"genie/ipdb/iptool/geoip"
-	"genie/ipdb/iptool/ip2location"
-	"genie/ipdb/iptool/ip2region"
-	"genie/ipdb/iptool/qqwry"
+	"github.com/xyu-io/genie/ipdb/iptool/geoip"
+	"github.com/xyu-io/genie/ipdb/iptool/ip2location"
+	"github.com/xyu-io/genie/ipdb/iptool/ip2region"
+	"github.com/xyu-io/genie/ipdb/iptool/qqwry"
 	"log"
 	"strings"
 )

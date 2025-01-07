@@ -4,7 +4,7 @@ import (
 	"crypto/aes"
 	"encoding/base64"
 	"encoding/json"
-	"genie/outer"
+	"github.com/xyu-io/genie/outer"
 	"testing"
 )
 

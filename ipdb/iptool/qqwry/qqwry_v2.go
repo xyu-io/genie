@@ -3,7 +3,7 @@ package qqwry
 import (
 	"errors"
 	"fmt"
-	"genie/ipdb/iptool/ip_base"
+	"github.com/xyu-io/genie/ipdb/iptool/ip_base"
 	"log"
 	"os"
 

@@ -1,7 +1,7 @@
 package licenser
 
 import (
-	"genie/looper"
+	"github.com/xyu-io/genie/looper"
 	"testing"
 	"time"
 )

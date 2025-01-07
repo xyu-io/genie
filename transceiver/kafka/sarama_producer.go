@@ -6,7 +6,7 @@ import (
 	"crypto/x509"
 	"errors"
 	"fmt"
-	"genie/iper"
+	"github.com/xyu-io/genie/iper"
 	"net"
 	"os"
 	"strconv"

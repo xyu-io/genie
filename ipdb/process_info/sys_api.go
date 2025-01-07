@@ -1,9 +1,9 @@
 package process_info
 
 import (
-	"genie/iper"
 	"github.com/shirou/gopsutil/cpu"
 	"github.com/shirou/gopsutil/host"
+	"github.com/xyu-io/genie/iper"
 )
 
 func init() {
@@ -17,7 +17,7 @@ func init() {
 	logicNum, _ := cpu.Counts(true)
 	physicalNum, _ := cpu.Counts(false)
 	SysMsg = &ProcInfo{
-		HostIp:         localip.LocalIP(),
+		HostIp:         iper.LocalIP(),
 		SysInfo:        sysInfo,
 		CpuLogicNum:    logicNum,
 		CpuPhysicalNum: physicalNum,
