@@ -84,13 +84,13 @@ func TestSysLogCli(t *testing.T) {
 		TimeReceivedNs:      "2024-08-23T09:36:39+08:00",
 		SequenceNum:         231,
 		SamplingRate:        12,
-		SamplerAddress:      "10.52.2.222",
+		SamplerAddress:      "127.0.0.1",
 		TimeFlowStartNs:     1713319377000000000,
 		TimeFlowEndNs:       1713319377000000000,
 		Bytes:               12,
 		Packets:             64,
-		SrcAddr:             "10.52.2.66",
-		DstAddr:             "10.52.2.229",
+		SrcAddr:             "127.0.0.2",
+		DstAddr:             "127.0.0.1",
 		Etype:               "IPv4",
 		Proto:               "TCP",
 		SourcePort:          1032,
@@ -139,7 +139,7 @@ func TestSysLogCli(t *testing.T) {
 		ICMPPayloadLen:      0,
 		FlowUid:             "526c4b40b4c019069ed5b0f44ee79f94",
 		FlowCount:           1,
-		Collector:           "10.52.2.222",
+		Collector:           "127.0.0.1",
 	}
 	// 发送多条日志消息
 	for i := 0; i < 2; i++ {
