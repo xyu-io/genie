@@ -3,43 +3,43 @@ package queue
 var _ Queue = (*Chann)(nil)
 
 type Chann struct {
-	ch chan interface{}
+	Ch chan interface{}
 }
 
 // NewChan news a channel for simulate the queue
 func NewChan() *Chann {
 	return &Chann{
-		ch: make(chan interface{}),
+		Ch: make(chan interface{}),
 	}
 }
 
 func (c *Chann) Pop() interface{} {
-	return <-c.ch
+	return <-c.Ch
 }
 
 func (c *Chann) PopBatch(max int) []interface{} {
-	if max > len(c.ch) {
-		max = len(c.ch)
+	if max > len(c.Ch) {
+		max = len(c.Ch)
 	}
 	data := make([]interface{}, 0, max)
 	for i := 0; i < max; i++ {
-		data = append(data, <-c.ch)
+		data = append(data, <-c.Ch)
 	}
 	return data
 }
 
 func (c *Chann) Push(value interface{}) bool {
-	c.ch <- value
+	c.Ch <- value
 	return true
 }
 
 func (c *Chann) PushBatch(vs []interface{}) bool {
 	for _, v := range vs {
-		c.ch <- v
+		c.Ch <- v
 	}
 	return true
 }
 
 func (c *Chann) Len() int {
-	return len(c.ch)
+	return len(c.Ch)
 }

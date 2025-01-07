@@ -103,7 +103,7 @@ func TestQueue(t *testing.T) {
 		So(cQueue.PushBatch([]interface{}{2, 3, 4}), ShouldBeTrue)
 		So(cQueue.Push(5), ShouldBeTrue)
 		So(cQueue.PushBatch([]interface{}{6, 7}), ShouldBeTrue)
-		close(cQueue.ch)
+		close(cQueue.Ch)
 		// 读出数据
 		So(cQueue.Len(), ShouldEqual, 7)
 		So(cQueue.Pop(), ShouldEqual, 1)
