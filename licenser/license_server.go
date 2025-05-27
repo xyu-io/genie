@@ -35,9 +35,9 @@ func GetLicServer() *LicServer {
 }
 
 // VerifyLicense verify license used by middleware
-func VerifyLicense() error {
+func VerifyLicense() (string, error) {
 	if instance == nil {
-		return errors.New("license not init")
+		return "", errors.New("license not init")
 	}
 	if err := instance.CheckLicense(); err != nil {
 		log.Warn("product license check failed, data receiver is stop")
@@ -47,9 +47,9 @@ func VerifyLicense() error {
 		} else {
 			log.Infof("please update the product license file, machine code:  \n%s\n", mCode)
 		}
-		return err
+		return mCode, err
 	}
-	return nil
+	return "", nil
 }
 
 // License get license
